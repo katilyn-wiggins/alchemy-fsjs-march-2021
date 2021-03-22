@@ -1,7 +1,8 @@
 
 const copyAndPush = (array, number) => {
-  array.push(number); 
-  return array;
+  const clonedArray = [...array]; 
+  clonedArray.push(number); 
+  return clonedArray;
 };
 
 module.exports = copyAndPush;
