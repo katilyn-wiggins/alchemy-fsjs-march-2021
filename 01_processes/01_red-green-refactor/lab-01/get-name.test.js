@@ -1,4 +1,4 @@
-const getName = require('./GetName');
+const getName = require('./get-name');
 
 const spot = { name: 'spot', age: 5, weight: '20 lbs' };
 
