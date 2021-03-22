@@ -14,15 +14,11 @@ describe('grabs name property from getName function', () => {
     });
   });
 
-
-
   it('takes in any object with a property of name and returns its value', () => {
     const extractedName = getName(character);
 
     expect(extractedName).toEqual({
-      name: 'spot',
+      name: 'Aang',
     });
   });
 });
-
-

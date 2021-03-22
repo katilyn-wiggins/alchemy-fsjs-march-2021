@@ -1,7 +1,7 @@
-const getName = () => {
-
+const getName = (object) => {
+  const name = object['name']; 
   return {
-    name: 'spot'
+    name
   };
 }; 
 
