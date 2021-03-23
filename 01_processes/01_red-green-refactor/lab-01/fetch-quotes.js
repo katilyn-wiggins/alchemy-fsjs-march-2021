@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
-const fetchQuotes = () => {
-  
-  return ('I\'m a fraud. A poor, lazy, sexy fraud.');
-}; 
+const fetchQuotes = async() => {
+  const res = await fetch('http://futuramaapi.herokuapp.com/api/quotes/1');
+  const body = await res.json(); 
+  return body[0]; 
+};
 
-module.exports = fetchQuotes; 
-
+module.exports = fetchQuotes;
