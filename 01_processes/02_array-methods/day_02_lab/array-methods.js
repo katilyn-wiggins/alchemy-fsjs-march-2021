@@ -1,39 +1,47 @@
-const emotionalArray = [
-  'happy',
-  'sad',
-  'depressed',
-  'overwhelmed',
-  'stressed',
-  'joyous',
-  'optimistic',
-];
+const mapper = (array, callback) => { 
+  let newArray = [];
+  for (let index = 0; index < array.length; index++) {
+     newArray = [...newArray, callback(array[index])];
+     
+  }
+  return newArray;
+};
 
-describe('array functions', () => {
-  describe('array.map but harder function', () => {
-    it('takes in an array and then applies the callback and returns each item after the callback has acted on it', () => {
-      const mappedItems = mapper(array, () => );
+const filterer = (array, callback) => { 
+  let newArray = [];
+  for (let index = 0; index < array.length; index++) {
+    if(callback(array[index])) {
+     newArray = [...newArray, array[index]];
+    }  
+  }
+  return newArray;
+};
 
-      expect(mappedItems).toEqual(emotionalArray);
-    });
-  });
+const indexer = (array, callback) => { 
+  let newArray = [];
+  for (let index = 0; index < array.length; index++) {
+    if(callback(array[index])) {
+     newArray = [...newArray, index];
+    }  
+  }
+  return newArray;
+};
 
-  //do holes part after everything else
+const reducer = (array, callback) => { 
+  let newArray = [];
+  let total = 0; 
+  for (let index = 0; index < array.length; index++) { 
+    total += array[index]; 
+    newArray = [total];
+    
+  }
+  return newArray;
+};
 
-  // describe('array.filter but harder function', () => {
-  //   it('takes in an array and returns all items whose callback returns true', () => {});
-  // });
-
-  // describe('array.findIndex but harder function', () => {
-  //   it('takes in an array and returns the index of the first item whose callback returns true', () => {});
-  // });
-
-  // describe('array.reduce but harder function', () => {
-  //   it('continuously adds the values in an array and returns the final accumulator value', () => {});
-  // });
-
-  // describe('array.every but harder function', () => {
-  //   it('takes in an array and returns true if all values are true, otherwise returns false', () => {});
-  // });
-});
-
+module.exports = {
+  mapper, 
+  filterer, 
+  indexer, 
+  reducer, 
+}; 
 
