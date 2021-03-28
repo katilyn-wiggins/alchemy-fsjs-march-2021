@@ -7,6 +7,7 @@ const helloArray = ['hello', 'world', 'my', 'friends', 'name', 'is', 'frannie', 
 const helloFiltArray = ['HELLO', 'WORLD', 'MY', 'NAME', 'IS', 'BURGER'];
 
 
+
 describe('capitalize and filter function', () => {
   it('should capitlize the given strings and filter out any string beginning with the letter f', () => {
     const capAndFilt = capitalizeAndFilter(strangeArray); 
