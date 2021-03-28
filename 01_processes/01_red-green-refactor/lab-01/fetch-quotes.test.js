@@ -17,6 +17,7 @@ fetch.mockImplementation(() =>
 );
 
 describe('function that returns a quote from an API', () => {
+  // eslint-disable-next-line space-before-function-paren
   it('should return a single random quote when call is made to the futurama API', async () => {
     const aSingleRandomFuturamaQuote = await fetchQuotes();
 
